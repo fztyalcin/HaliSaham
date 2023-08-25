@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Sehirler";
+}
+
+
+<h2>Sehirler</h2>
+
+<div id="divSehirler">
+</div>
+
+
+
+
+<div class="modal fade" id="sehirModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Şehir Bilgileri</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <label for="selectSehirId" class="form-label">Plaka No</label>
+                <select type="text" id="selectSehirId" class="form-control"></select>
+
+                <label for="inputSehirAd" class="form-label">Şehir Adı</label>
+                <input type="text" id="inputSehirAd" class="form-control">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/sehir.js" asp-append-version="true"></script>

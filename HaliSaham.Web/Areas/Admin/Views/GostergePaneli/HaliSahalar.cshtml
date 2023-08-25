@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Halı Sahalar";
+}
+
+<h2>Halı Sahalar</h2>
+
+<div id="divHaliSahalar">
+</div>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" onclick="YeniHaliSaha()">
+    Yeni Halı Saha Ekle
+</button>
+
+
+<div class="modal fade" id="haliSahaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Halı Saha Bilgileri</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <label for="inputHaliSahaAd" class="form-label">Halı Saha Adı</label>
+                <input type="text" id="inputHaliSahaAd" class="form-control">
+
+                <label for="inputHaliSahaAdres" class="form-label">Halı Saha Adresi</label>
+                <input type="text" id="inputHaliSahaAdres" class="form-control">
+
+                <label for="inputHaliSahaMaksimumKapasite" class="form-label">Maksimum Kapasitesi</label>
+                <input type="text" id="inputHaliSahaMaksimumKapasite" class="form-control">
+
+                <label for="inputKurumsalMusteriId" class="form-label">Halı Sahanın Sahibi</label>
+                <input type="text" id="inputKurumsalMusteriId" class="form-control">
+
+                <label for="inputHaliSahaSehirId" class="form-label">Halı Sahanın Şehir Plakası</label>
+                <input type="text" id="inputHaliSahaSehirId" class="form-control">
+
+               
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                <button type="button" class="btn btn-primary" onclick="HaliSahaKaydet()">Kaydet</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/admin/halisaha.js" asp-append-version="true"></script>

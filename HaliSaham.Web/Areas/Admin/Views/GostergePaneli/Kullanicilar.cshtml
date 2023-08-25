@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Kullanıcılar";
+}
+<h2>Kullanıcılar</h2>
+
+<div id="divKullanicilar">
+</div>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" onclick="YeniKullanici()">
+    Yeni Kullanıcı Ekle
+</button>
+
+
+<div class="modal fade" id="kullaniciModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Kullanıcı Bilgileri</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <label for="inputKullaniciAd" class="form-label">Kullanıcı Adı</label>
+                <input type="text" id="inputKullaniciAd" class="form-control">
+
+                <label for="inputKullaniciSoyad" class="form-label">Kullanıcı Soyadı</label>
+                <input type="text" id="inputKullaniciSoyad" class="form-control">
+
+                <label for="inputKullaniciSifre" class="form-label">Kullanıcı Şifresi</label>
+                <input type="text" id="inputKullaniciSifre" class="form-control">
+
+                <label for="inputKullaniciEPosta" class="form-label">Kullanıcı E-Postası</label>
+                <input type="text" id="inputKullaniciEPosta" class="form-control">
+
+                <label for="inputKullaniciTelefon" class="form-label">Kullanıcı Telefonu</label>
+                <input type="text" id="inputKullaniciTelefon" class="form-control">
+
+
+
+                
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                <button type="button" class="btn btn-primary" onclick="KullaniciKaydet()">Kaydet</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/admin/kullanici.js" asp-append-version="true"></script>

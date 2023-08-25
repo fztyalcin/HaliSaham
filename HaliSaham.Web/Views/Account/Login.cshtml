@@ -1,0 +1,22 @@
+﻿@if (!string.IsNullOrEmpty(ViewBag.LoginError))
+{
+    <span></span>
+
+    <div class="alert alert-danger" role=alert>
+        @ViewBag.LoginError
+    </div>
+}
+
+
+@using (Html.BeginForm("GirisYap", "Account")) {
+
+<div class="mb-3">
+    <label for="inputEmail" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com" name="EPosta">
+</div>
+<div class="mb-3">
+    <label for="inputPassword" class="form-label">Password</label>
+    <input type="password" class="form-control" id="inputPassword" name="Sifre">
+</div>
+<button type="submit" class="btn btn-success">Giriş Yap</button>
+}
